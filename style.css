@@ -23,7 +23,49 @@ img{
     background-color: var(--dark-blue);
     color: var(--neutral);
     grid-row: 1/3;
+    display: grid;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    grid-template-rows: 1fr 6fr;
+    padding: 0px 20px;
+
     
+}
+
+.nav span{
+    padding-bottom: 20px;
+    margin: 0;
+}
+    
+.logo{
+    font-size: 25px;
+    letter-spacing: 2px;   
+    display: flex;
+    flex: 1;
+    justify-content: left;
+    align-items: center;
+}
+
+.logo img{
+    align-items: center;
+}
+
+.logo>img{
+    width: 50px;
+    
+
+}
+
+
+
+.nav-top{
+    padding-bottom: 50px;
+    
+    
+}
+
+.nav-icons>span{
+   
 }
 
 .header{
@@ -37,16 +79,20 @@ img{
     display: grid;
     grid-template-columns: 0.1fr 3fr;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 40px;
     padding-right: 40px; 
+}
+.search>span>img{
+    width: 30px;
+    padding-right: 25px;
 }
 
 #search{
-    border-radius: 15px;
+    border-radius: 20px;
     border: none;
-    height: 30px;
-  
+    height: 35px;
     padding-left: 10px; 
+    
     
 }
 
@@ -56,12 +102,45 @@ img{
 }
 
 .header-account{
- 
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
+    gap: 25px;
+    font-size: 20px;
+    letter-spacing: 2px;
 }
+.header-account>img{
+    width: 30px;
+}
+#profile-img{
+    width: 50px;
+    content: "";
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    border-radius: 50%;
+}
+
+.header-greetings{
+ 
+    grid-template-columns: 1fr 5fr;
+    grid-auto-flow: column;
+   
+}
+
+button{
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--pink);
+    color: var(--neutral);
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+
 
 h1{
     font-size: 20px;
@@ -74,29 +153,35 @@ h1{
 .container{
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 5fr;
 }
+
+.main-box{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    gap: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+   
+}
+
 
 .box{
     background-color: var(--pale-blue);
     border-radius: 10px;
     border: 2px solid var(--dark-blue);
     padding: 30px 10px;
-    
-}
-.main-box{
-    display: grid;
-    grid-template-columns:  1fr 1fr;
-    grid-column: 1/2;
-    gap: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-
-    
-    
 }
 .annou{
+    
     grid-column: 2/3;
+     
+    border: 2px solid var(--dark-blue);
 }
+
+
 .trendings{
     grid-column: 2/3;
 }
