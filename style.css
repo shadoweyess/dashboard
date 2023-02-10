@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 :root{
     --dark-blue:#334155;
     --neutral:#fafafa;
     --pale-blue:#e2e8f0;
     --pink:#9d174d;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 
@@ -14,20 +19,30 @@ body{
     grid-template-columns: 1fr 4fr;
 }
 img{
-    width: 20px;
+    width: 25px;
     height: auto;
     
+    
+}
+
+a{
+    color: var(--neutral);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: underline 1px var(--neutral);
 }
 
 .sidebar{
     background-color: var(--dark-blue);
     color: var(--neutral);
     grid-row: 1/3;
-  
     font-size: 20px;
+    font-weight: 400;
     letter-spacing: 1.5px;
-    
-    padding: 20px 20px 0px 20px;
+    padding: 20px 20px 0px 30px;
 
     
 }
@@ -48,12 +63,12 @@ img{
 }
 
 .logo>img{
-    width: 50px;
+    width: 40px;
     
 
 }
 
-.nav-icons,span{
+.nav-icons,a{
     justify-content: left;
     align-items: center;
     display: flex;
@@ -62,18 +77,14 @@ img{
 }
 
 .nav-icons>img{
-    padding-right: 10px;
-    width: 20px;
-    margin-top: 15px;
+    padding-right: 20px;
+    width: 28px;
+    margin-top: 15px; 
 }
-
 
 .nav-top{
-    padding-bottom: 50px;
-    
-    
+    padding-bottom: 50px; 
 }
-
 
 .header{
     padding: 20px 0px;
@@ -81,7 +92,9 @@ img{
     display: grid;
     grid-template-columns: 5fr 2fr;
     grid-template-rows: 1fr 1fr;
+    box-shadow: 0 0 6px rgb(136, 136, 136);
 }
+
 .search{
     display: grid;
     grid-template-columns: 0.1fr 3fr;
@@ -89,6 +102,7 @@ img{
     padding-left: 40px;
     padding-right: 40px; 
 }
+
 .search>span>img{
     width: 30px;
     padding-right: 25px;
@@ -98,9 +112,7 @@ img{
     border-radius: 20px;
     border: none;
     height: 35px;
-    padding-left: 10px; 
-    
-    
+    padding-left: 10px;  
 }
 
 #search:focus{
@@ -117,55 +129,48 @@ img{
     font-size: 20px;
     letter-spacing: 2px;
 }
+
 .header-account>img{
     width: 30px;
 }
+
 #profile-img{
     width: 50px;
     content: "";
     background-color: rgb(255, 255, 255);
-    
     border-radius: 50%;
 }
 
 .header-greetings{
     padding-left: 40px;
-    
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-
 .header-greetings>.click{
     grid-column: 2/3;
- 
-  
-}
+ }
 
 .greet-pic>img{
     content: "";
     background-color: rgb(255, 255, 255);
     width: 60px;
-    border-radius: 50%;
-    
+    border-radius: 50%;  
 }
 
 .hello{
     padding-left: 20px;
-    
     align-items: center;
 }
 
 .there{
     font-size: 15px;
-    margin-bottom: -10px;
 }
 
 .login-person{
     font-size: 25px;
-    letter-spacing: 2px;
-    
+    letter-spacing: 2px; 
 }
 .click{
     display: flex;
@@ -183,41 +188,40 @@ button{
     text-align: center;
     cursor: pointer;
     
-    
 }
 
 button:hover{
-    
     background-color:var(--neutral);
     color: var(--pink);
 }
     
-
-
-
 h1{
     font-size: 20px;
+    letter-spacing: 2px;
    
-}
-
-.users{
-    background-color: var(--pink);
 }
 
 .container{
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 5fr;
+    margin: 30px 50px;
+    
+}
+
+.middle-content{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-box{
+    flex-grow: 1;
     display: grid;
-    grid-template-columns:  1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-column: 1/2;
-  
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);                                                                                       
     gap: 20px;
-    padding-left: 30px;
+
+    
     padding-right: 30px;
    
 }
@@ -226,19 +230,58 @@ h1{
 .box{
     background-color: var(--pale-blue);
     border-radius: 10px;
-    border: 2px solid var(--dark-blue);
-    padding: 30px 10px;
+    box-shadow: 0 3px 6px rgb(136, 136, 136);
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    border-left: 10px solid var(--pink);
+}
+.icons{
+    display: flex;
+    align-self: flex-end;
+    gap: 10px;
+    margin-top: auto;
+    
 }
 .annou{
-    
     grid-column: 2/3;
-    grid-row: 2/3;
-    border-radius: 10px;
-    border: 2px solid var(--dark-blue);
+    
 }
 
+.news-box{
+    
+    background-color: var(--pale-blue);
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0 3px 6px rgb(136, 136, 136);
+    
+}
+.news2>span,
+.news>span{
+    padding-bottom: 10px;
+    font-weight: bold;
 
+}
+
+.news{
+    border-bottom: 1px solid black ;
+    padding: 10px 0px;
+    
+}
+
+.news2{
+    padding: 10px 0px;
+}
 .trendings{
+    margin-top: 30px;
+}
+.trend-box{
     grid-column: 2/3;
     border-radius: 10px;
+    background-color: var(--pink);
+    box-shadow: 0 3px 6px rgb(136, 136, 136);
+}
+
+.users{
+    
 }
